@@ -1,7 +1,7 @@
 {
-  "name": "jrgcomponents",
-  "version": "0.0.195",
-  "description": "Components developed by Jameson R Grieve for use in React/NextJS projects.",
+  "name": "@jgrieve/next-log",
+  "version": "0.0.0",
+  "description": "Log in NextJS with separate client and server verbosities.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
