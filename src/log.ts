@@ -16,16 +16,24 @@ export default function log(
   if (typeof window === 'undefined') {
     if (!isNaN(Number(process.env.LOG_VERBOSITY_SERVER)) && verbosity.server !== undefined) {
       // If we are on server, the env var for server output is defined and there is a server verbosity level for this log.
-      if (heading) console.log(`--- ${heading.toUpperCase()} ---`);
+      if (heading) {
+        console.log(`--- ${heading.toUpperCase()} ---`);
+      }
       console.log(...logItems);
-      if (heading) console.log('-'.repeat(heading.length + 8));
+      if (heading) {
+        console.log('-'.repeat(heading.length + 8));
+      }
     }
   } else {
     // If we are on client, the env var for client output is defined and there is a client verbosity level for this log.
     if (!isNaN(Number(process.env.NEXT_PUBLIC_LOG_VERBOSITY_CLIENT)) && verbosity.client !== undefined) {
-      if (heading) console.log(`--- ${heading.toUpperCase()} ---`);
+      if (heading) {
+        console.log(`--- ${heading.toUpperCase()} ---`);
+      }
       console.log(...logItems);
-      if (heading) console.log('-'.repeat(heading.length + 8));
+      if (heading) {
+        console.log('-'.repeat(heading.length + 8));
+      }
     }
   }
 }
